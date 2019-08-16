@@ -29,4 +29,5 @@ RUN echo "deb [check-valid-until=no] http://cdn-fastly.deb.debian.org/debian jes
 USER jenkins
 RUN helm init --client-only
 RUN helm plugin install https://github.com/chartmuseum/helm-push
+RUN helm plugin list
 USER root
