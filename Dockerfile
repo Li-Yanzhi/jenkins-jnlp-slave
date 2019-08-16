@@ -27,10 +27,10 @@ RUN echo "deb [check-valid-until=no] http://cdn-fastly.deb.debian.org/debian jes
     apt-get -y install azure-cli
 
 USER jenkins
-RUN helm init --client-only
-RUN helm plugin install https://github.com/chartmuseum/helm-push
-RUN helm plugin list
+RUN helm init --client-only && \
+    helm plugin install https://github.com/chartmuseum/helm-push && \
+    helm plugin list
 USER root
-RUN helm init --client-only
-RUN helm plugin install https://github.com/chartmuseum/helm-push
-RUN helm plugin list
+RUN helm init --client-only && \
+    helm plugin install https://github.com/chartmuseum/helm-push && \
+    helm plugin list
