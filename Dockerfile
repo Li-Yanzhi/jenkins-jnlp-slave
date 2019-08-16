@@ -31,3 +31,6 @@ RUN helm init --client-only
 RUN helm plugin install https://github.com/chartmuseum/helm-push
 RUN helm plugin list
 USER root
+RUN helm init --client-only
+RUN helm plugin install https://github.com/chartmuseum/helm-push
+RUN helm plugin list
