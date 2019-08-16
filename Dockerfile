@@ -3,7 +3,7 @@ FROM adriagalin/jenkins-jnlp-slave:1.4
 WORKDIR /
 
 #Add Helm
-ENV HELM_VERSION v2.14.1
+ENV HELM_VERSION v2.14.3
 ENV HELM_FILENAME helm-${HELM_VERSION}-linux-amd64.tar.gz
 RUN curl -L http://storage.googleapis.com/kubernetes-helm/${HELM_FILENAME} | tar zxv -C /tmp && \
     cp /tmp/linux-amd64/helm /usr/local/bin/helm && \
