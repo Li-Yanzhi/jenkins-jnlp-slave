@@ -2,6 +2,8 @@ FROM jenkinsci/jnlp-slave
 
 WORKDIR /
 
+USER root
+
 # Install docker client, kubectl and helm
 RUN curl -sSL https://get.docker.com/ | sh && \
     curl https://raw.githubusercontent.com/helm/helm/master/scripts/get > get_helm.sh && \
